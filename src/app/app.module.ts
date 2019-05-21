@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from  "@angular/platform-browser/animations";
+import{ HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +25,11 @@ import { ConsumeparentComponent } from './consume/consumeparent/consumeparent.co
 import { Consumechild1Component } from './consume/consumechild1/consumechild1.component';
 import { Consumechild2Component } from './consume/consumechild2/consumechild2.component';
 import { ChildComponent } from './consume/child/child.component';
+import { NospecComponent } from './delete/nospec/nospec.component';
+import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
+import { AnimationComponent } from './animate/animation/animation.component';
+import { RemoteComponent } from './restapi/remote/remote.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +49,20 @@ import { ChildComponent } from './consume/child/child.component';
     ConsumeparentComponent,
     Consumechild1Component,
     Consumechild2Component,
-    ChildComponent
+    ChildComponent,
+    NospecComponent,
+    TemplateformComponent,
+    ReactiveformComponent,
+    AnimationComponent,
+    RemoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path:'',
     redirectTo:'pipe',
@@ -99,6 +115,22 @@ children:[
     }
 
   ]
+},
+{
+  path:'template',
+  component:TemplateformComponent
+},
+{
+  path:'reactive',
+  component:ReactiveformComponent
+},
+{
+  path:'animate',
+  component:AnimationComponent
+},
+{
+  path:'restApI',
+  component:RemoteComponent
 },
 {
   path:'**',

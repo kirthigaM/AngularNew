@@ -14,7 +14,7 @@ export class ConsumeparentComponent implements OnInit {
   ngOnInit() {
   }
 
-  receiveNewName= function(e){
+  receivedNewName= function(e){
     console.log(e)
     this.name= e
   }

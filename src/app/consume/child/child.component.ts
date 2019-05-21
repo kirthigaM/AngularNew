@@ -12,7 +12,7 @@ export class ChildComponent implements OnInit {
   @Output() sendToParent = new EventEmitter()
  
    broadCastChange = function(){
-this.sendToParent.emit (this.SendName)
+this.sendToParent.emit (this.sendName)
   }
   constructor() { }
 

@@ -3,7 +3,7 @@
     <br>
     Name: {{name}}
     <br>
-    <div class="child">I am Child: <app-child [sendName]="name" (sendToParent)="receiveNewName($event)"></app-child>
+    <div class="child">I am Child: <app-child [sendName]="name" (sendToParent)="receivedNewName($event)"></app-child>
     </div>
     
   </div>
