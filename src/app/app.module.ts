@@ -30,6 +30,7 @@ import { TemplateformComponent } from './forms/templateform/templateform.compone
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
 import { AnimationComponent } from './animate/animation/animation.component';
 import { RemoteComponent } from './restapi/remote/remote.component';
+import { EmployeeDetailComponent } from './restapi/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { RemoteComponent } from './restapi/remote/remote.component';
     TemplateformComponent,
     ReactiveformComponent,
     AnimationComponent,
-    RemoteComponent
+    RemoteComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -131,6 +133,10 @@ children:[
 {
   path:'restApI',
   component:RemoteComponent
+},
+{
+  path:'remote/:id',
+  component:EmployeeDetailComponent
 },
 {
   path:'**',
